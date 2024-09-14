@@ -31,9 +31,9 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v2
 
-    - name: Get ECR repository URI
-      id: ecr_uri
-      run: echo "REPO_URI=$(996566778121.dkr.ecr.us-east-1.amazonaws.com/web-app)" >> $GITHUB_ENV
+    # - name: Get ECR repository URI
+    #   id: ecr_uri
+    #   run: echo "REPO_URI=$(996566778121.dkr.ecr.us-east-1.amazonaws.com/web-app)" >> $GITHUB_ENV
 
     - name: Build, tag, and push Docker image
       env:
